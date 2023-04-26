@@ -1,0 +1,155 @@
+//git&&Github Command 
+
+!!First we have download git in our PC!!
+//checking process is git is install in your pc or not
+command : git --version
+Note : If the terminal shows this types of result such as (git version 2.34.1) that means git is installed in your PC .
+
+//For checking your Current status
+Command : git status
+
+
+//If you want to clone or copy  remote repository to your local folder 
+git clone URL
+Command : git clone https://github.com/RlM100always/Git_Error_Fix.git
+
+
+//For initializing .git folder
+Command : git init 
+
+//For Adding File 
+If File name = Test.txt
+git add File name
+Command : git add Test.txt
+
+//For adding Folder
+If Folder name = DSA
+Command : git add DSA/
+
+//For adding all files and Folder
+Command : git add . 
+
+//For commiting 
+git commit -m "Anything as your wish"
+
+//If you want to add new branch without default
+git branch -M branchname
+If branchname = master
+Command : git branch -M master
+
+//For adding remote origin
+Command : git remote add origin https://github.com/RlM100always/Test1.git
+
+Note : If you face (//fatal: remote origin already exists) this types of problem when you add origin , you have to be Fixed this Error
+
+Way 1 :
+Error name : //fatal: remote origin already exists 
+Lets fix it 
+1.git remote remove origin
+2.git remote -v
+3.git remote add origin [url].git
+->Now fix this issue .
+
+Way 2 : 
+//fatal: remote origin already exists 
+1.git remote rename origin dev
+2.git remote -v
+->It is the another way to fix this same problem .
+
+//Last you have to push you file and folder from local PC to your online repository(remote repository)
+git push -u origin branchname
+If branchname = master
+Command : git push -u origin master
+
+//Esay way to swtching one branch to another branch
+git checkout branchname
+if branch name = (main) and you want to go on branch (master).
+You have to check it first which is your current branch.
+For this : 
+command : git status
+(It shows your current branch name) 
+if branch name = (main) and you want to go on branch (master).
+
+than :
+command : git checkout master
+Now ->your branch will be chanced from main to master
+
+//for creating Branch
+command : git branch <branchName>
+
+//For showing how many number of branch in your local repository
+command : git branch
+
+//delete branch
+//Deleting a branch LOCALLY
+git branch -d <branch>
+
+//Deleting a branch REMOTELY
+git push <remote> --delete <branch>
+git push origin --delete fix/authentication
+
+//You can also use this shorter command to delete a branch remotely: git push <remote> :<branch>
+
+/*Try to synchronize your branch list using.
+The -p flag means "prune". After fetching, branches which no longer exist on the remote will be deleted.*/
+git fetch -p
+
+//When checkout swtching doesnt work
+/*Stash Changes
+Use git stash to store your changes until you are ready to commit. Git stash will conserve your changes, but not associate them with any commit or branch until you are ready.
+*/
+git stash push 
+git checkout <previous-branch>
+git stash pop 
+
+//git log --oneline
+//git checkout idnumber
+
+//When pushing shows some error .We use this command to push repository local to remote.
+command : git push -f origin branchname
+
+//For swtching your current branch
+git switch -c newbranchname
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
