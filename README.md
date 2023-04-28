@@ -23,7 +23,8 @@ In this repository,I  have solve some common problem on git and GitHub. New user
 - [Error 1 way 1](#error-1-way-1)
 - [Error 1 way 2](#error-1-way-2)
 - [ Error 2 checkout swtching doesnt work ](#error-2-checkout-swtching-doesnt-work)
-- [Error 3 pushing shows some error use this command to Fix it](#error-3-pushing-shows-some-error-use-this-command-to-fix-it)
+- [Error 3 pushing shows some error ](#error-3-pushing-shows-some-error)
+- [Error 4 origin does not appear to be a git repository](#error-4-origin-does-not-appear-to-be-a-git-repository)
 
 ## !!First you haveto download git in your PC!!
 ### Checking process is git is install in your pc or not
@@ -76,7 +77,7 @@ Command : git commit -m "Anything as your wish"
 
 ### For adding new branch 
 ```sh
-git branch branchname
+git branch <branch name>
 #If branchname = master
 Command : git branch master
 ```
@@ -107,14 +108,14 @@ Command : git remote -v
 
 ###  Push local to remote
 ```sh
-Command : git push -u origin branchname
+Command : git push -u origin <branch name>
 #If branchname = master
 Command : git push -u origin master
 ```
 
 ### Swtching one branch to another branch 
 ```sh
-Command : git checkout branchname
+Command : git checkout <branch name>
 ```
 if branch name = (main) and you want to go on branch (master).
 You have to check it first which is your current branch.
@@ -130,7 +131,7 @@ Now your branch will be chanced from main to master.
 
 ### For creating Branch 
 ```sh
-Command : git branch <branchName>
+Command : git branch <branch name>
 ```
 
 ### Showing how many number of branch in your local repository 
@@ -173,7 +174,7 @@ Command : git stash pop
 Command : git log
 Command : git log --oneline
 ```
-### Error 3 pushing shows some error use this command to Fix it 
+### Error 3 pushing shows some error
 
 ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/RlM100always/Git_Error_Fix.git'
@@ -185,6 +186,18 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 #### Lets fix it : 
 ```sh
 Command : command : git push -f origin branchname
+```
+### Error 4 origin does not appear to be a git repository
+
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+```sh
+Command : git remote -v
+# If there is no remote repo called origin
+# Lets try following code
+Command : git remote add origin <remote_URL>
+Command : git push -f origin <branch name>
 ```
 
 ### For swtching your current branch 
